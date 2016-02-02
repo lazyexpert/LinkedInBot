@@ -63,10 +63,11 @@ interval - interval between bot clicks. Play with this param on your own risk. I
 - You have to insert the script each time you reload the page.
 - If your computer falls asleep, I believe, the script wont work ;)
 
-# Example, recruiter search for js developers:
+# Example
+Recruiter searches for javascript developers:
 ``` javascript
 bot.start({
-  "keywords"  : ["javascript", "node", "meteor", "anglar"],
+  "keywords"  : ["javascript", "node", "meteor", "angular", "backbone"],
   "count" : 200,
   "minus" : ["trainee", "junior"]
 })
