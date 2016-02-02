@@ -36,6 +36,11 @@ You start the bot:
 bot.start( {} )
 ```
 
+If you want to stop:
+``` javascript
+bot.stop()
+```
+
 You pass in options object, all fields are optional:
 ``` javascript
 bot.start({
