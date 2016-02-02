@@ -14,7 +14,6 @@ Micro bot, linkedIn manager. This bot can loop throught accounts of "People you 
 5. Set cursor to console, paste all the code
 
 
-
 # Check
 If all done correctly, when you type in console "bot", you have to see something like this:
 ``` javascript
