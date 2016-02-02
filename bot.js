@@ -42,7 +42,7 @@ var bot = {
 
         console.info("Added:" + description)
       	console.info("Added 1. Left:" + this.count)
-
+ 
 
       } else {
       	person.querySelector( this.selectors.cancel ).click()
