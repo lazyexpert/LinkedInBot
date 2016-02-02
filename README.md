@@ -3,7 +3,7 @@ Micro bot, linkedIn manager. This bot can loop throught accounts of "People you 
 
 # Install
 
-1. Open linkedIn
+1. Open linkedIn. Goto "People you might know" page
 
 2. Make right button Click in any place, pick "Inspect Element" (in mozilla)
 
