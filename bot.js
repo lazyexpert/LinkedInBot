@@ -7,6 +7,11 @@ var bot = {
     cancel: ".bt-close"
   },
   start : function( options ) {
+    if( !(options && options.keywords) ) return;
+
+    if( typeof this.timer !== "undefined" ) 
+      clearInterval(this.timer)
+
     this.keywords = options.keywords || []
 
     this.minus = options.minus || []
@@ -42,7 +47,7 @@ var bot = {
 
         console.info("Added:" + description)
       	console.info("Added 1. Left:" + this.count)
-  
+
 
       } else {
       	person.querySelector( this.selectors.cancel ).click()

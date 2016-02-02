@@ -41,7 +41,7 @@ If you want to stop:
 bot.stop()
 ```
 
-You pass in options object, all fields are optional:
+You pass in options object, all fields are optional, except keywords:
 ``` javascript
 bot.start({
   "keywords" : [ "recruiter", "рекрутер", "рекрутинг", "recruitment", "looking for", "searching for" ],
@@ -51,7 +51,7 @@ bot.start({
 })
 ```
 
-keywords - the keywords, that bot is looking for. Not case sensitive. Need at least one for positive match.
+keywords - the only required field keywords, that bot is looking for. Not case sensitive. Need at least one for positive match.
 
 count - the bot will stop after adding this amount
 
