@@ -46,7 +46,7 @@ You pass in options object, all fields are optional, except keywords:
 bot.start({
   "keywords" : [ "recruiter", "рекрутер", "рекрутинг", "recruitment", "looking for", "searching for" ],
   "count" : 100,
-  "minus" : ["position", "job"],
+  "minus" : ["position", "job", "opportunity", "opportunities"],
   "interval" : 2000
 })
 ```
