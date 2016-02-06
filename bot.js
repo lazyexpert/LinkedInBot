@@ -71,7 +71,7 @@ var bot = {
 
   test : function(str) {
     for( var t = 0; t < this.keywords.length; t++ )
-      if ( new RegExp(this.keywords[t], 'i').test(str) )
+      if ( new RegExp(this.keywords[t], 'i').test(str.toLowerCase()) )
         return true
 
     return false
@@ -79,7 +79,7 @@ var bot = {
 
   hasMinus : function(str) {
     for( var t = 0; t < this.minus.length; t++ )
-      if( new RegExp( this.minus[t], 'i').test(str) )
+      if( new RegExp( this.minus[t], 'i').test(str.toLowerCase()) )
 	return true
 
     return false
