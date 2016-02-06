@@ -71,7 +71,7 @@ var bot = {
 
   test : function(str) {
     for( var t = 0; t < this.keywords.length; t++ )
-      if ( new RegExp(this.keywords[t], 'i').test( str.toLowerCase() )) )
+      if ( new RegExp(this.keywords[t], 'i').test( str.toLowerCase() ) )
         return true
 
     return false
