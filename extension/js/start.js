@@ -48,8 +48,7 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
           },
 
           tick : function() {
-            let count = document.querySelectorAll( this.selectors.card ).length
-            if(count < 8 ) this.scroll()
+            this.scroll()
 
             var person = document.querySelector( this.selectors.card )
             if ( person ) {
@@ -81,15 +80,15 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
           },
 
           scroll : function() {
-            window.scroll(0, 1000)
-            setTimeout( function() {
-              window.scroll(0,0)
-            }, 1000)
+            if(!this.lastScroll )
+              this.lastScroll = 250            
+
+            window.scroll(0, this.lastScroll += 250)
           },
 
           test : function(str) {
             for( var t = 0; t < this.keywords.length; t++ )
-              if ( new RegExp(this.keywords[t], 'i').test( str.toLowerCase() ) )
+              if ( new RegExp(this.keywords[t].toLowerCase()).test( str.toLowerCase() ) )
                 return true
 
             return false
@@ -97,8 +96,8 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
 
           hasMinus : function(str) {
             for( var t = 0; t < this.minus.length; t++ )
-              if( new RegExp( this.minus[t], 'i').test( str.toLowerCase() ) )
-        	return true
+              if( new RegExp( this.minus[t].toLowerCase()).test( str.toLowerCase() ) )
+        	      return true
 
             return false
           }

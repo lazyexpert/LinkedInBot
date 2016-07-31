@@ -60,13 +60,17 @@
 
     keywords = DOM.keywords.value
 
-    if(keywords.length)
-      keywords = keywords.split(/\s/g)
+    if(keywords.length) {
+      keywords = keywords.split(/,/g)
+      keywords.forEach(keyword => keyword.trim())
+    }
 
     minus = DOM.minus.value
 
-    if(minus.length)
-        minus = minus.split(/\s/g)
+    if(minus.length) {
+      minus = minus.split(/,/g)
+      minus.forEach(el => el.trim())
+    }
 
     count = DOM.count.value | 0
     interval = DOM.interval.value | 0
