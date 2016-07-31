@@ -48,6 +48,8 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
           },
 
           tick : function() {
+            let count = document.querySelectorAll( this.selectors.card ).length
+            if(count < 8 ) this.scroll()
 
             var person = document.querySelector( this.selectors.card )
             if ( person ) {
@@ -75,15 +77,14 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
               if( !this.count )
               	this.stop()
 
-            } else {
-              window.scroll(0,500)
-
-              setTimeout( function() {
-              	window.scroll(0,0)
-              }, 1000)
-
             }
+          },
 
+          scroll : function() {
+            window.scroll(0, 1000)
+            setTimeout( function() {
+              window.scroll(0,0)
+            }, 1000)
           },
 
           test : function(str) {
@@ -104,13 +105,13 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
         }
 
         console.log("Starting bot")
+        console.log(request.data)
         ctx.bot.start(request.data)
 
       } else {
         console.log("Wrong page, sorry =)")
       }
     } else if(request.type == "stopLinkedInBot" ) {
-      console.log(ctx)
       if(ctx.bot)
         ctx.bot.stop()
     }

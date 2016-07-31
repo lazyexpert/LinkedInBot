@@ -61,12 +61,12 @@
     keywords = DOM.keywords.value
 
     if(keywords.length)
-      keywords = keywords.replace(/\s+/g, /\s/g).split(/\s/g)
+      keywords = keywords.split(/\s/g)
 
     minus = DOM.minus.value
 
     if(minus.length)
-        minus = minus.replace(/\s+/g, /\s/g).split(/\s/g)
+        minus = minus.split(/\s/g)
 
     count = DOM.count.value | 0
     interval = DOM.interval.value | 0
