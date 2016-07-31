@@ -48,7 +48,9 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
           },
 
           tick : function() {
-            this.scroll()
+            let count = document.querySelectorAll( this.selectors.card ).length
+            if(count <= 12 )
+              this.scroll()
 
             var person = document.querySelector( this.selectors.card )
             if ( person ) {
@@ -80,10 +82,11 @@ chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
           },
 
           scroll : function() {
-            if(!this.lastScroll )
-              this.lastScroll = 250            
+            window.scroll(0, document.getElementsByTagName('body')[0].getBoundingClientRect().bottom-50)
 
-            window.scroll(0, this.lastScroll += 250)
+            setTimeout(function() {
+              window.scroll(0,0)
+            }, 500)
           },
 
           test : function(str) {
