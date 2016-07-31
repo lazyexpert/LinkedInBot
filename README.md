@@ -3,15 +3,15 @@ Micro bot, linkedIn manager. This bot can loop throught accounts of "People you 
 
 # Install
 
-1. Open linkedIn. Goto "People you might know" page
+1. Open linkedIn. Goto "People you might know" page (https://www.linkedin.com/people/pymk?trk=nav_responsive_sub_nav_pymk)
 
-2. Make right button Click in any place, pick "Inspect Element" (in mozilla)
+2. Make right button Click in any place, pick "Inspect Element" (in mozilla, CTRL+SHIFT+C in chrome)
 
 3. Click the tab console
 
 4. Copy all code from file bot.js
 
-5. Set cursor to console, paste all the code
+5. Set cursor to console, paste all the code, press enter
 
 
 # Check
@@ -72,5 +72,3 @@ bot.start({
   "minus" : ["trainee", "junior"]
 })
 ```
-
-

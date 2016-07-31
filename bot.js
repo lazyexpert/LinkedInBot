@@ -9,7 +9,7 @@ var bot = {
   start : function( options ) {
     if( !(options && options.keywords) ) return;
 
-    if( typeof this.timer !== "undefined" ) 
+    if( typeof this.timer !== "undefined" )
       clearInterval(this.timer)
 
     this.keywords = options.keywords || []
@@ -41,14 +41,18 @@ var bot = {
       var description = person.querySelector( this.selectors.desc ).innerHTML
 
       if( this.test(description) && !this.hasMinus(description) ) {
-      	person.querySelector( this.selectors.add ).click()
+        let btn  = person.querySelector( this.selectors.add )
+        if(!btn) {
+          person.querySelector( this.selectors.cancel ).click()
 
-      	this.count--
+        	console.log(description + ": no match")
+        } else {
+            btn.click()
+            this.count--
 
-        console.info("Added:" + description)
-      	console.info("Added 1. Left:" + this.count)
-
-
+            console.info("Added:" + description)
+          	console.info("Added 1. Left:" + this.count)
+        }
       } else {
       	person.querySelector( this.selectors.cancel ).click()
 
