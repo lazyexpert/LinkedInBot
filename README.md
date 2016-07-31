@@ -1,8 +1,10 @@
 # Description
-Micro bot, linkedIn manager. This bot can loop throught accounts of "People you might now" page and according to settings will dismiss person, or add to your account.
+This bot is actually like assistant.
+Doing simply the same thing you will do.
+You set your demands of search and bot will execute as far as he can.
 
 # Install
-
+## Manual version
 1. Open linkedIn. Goto "People you might know" page (https://www.linkedin.com/people/pymk?trk=nav_responsive_sub_nav_pymk)
 
 2. Make right button Click in any place, pick "Inspect Element" (in mozilla, CTRL+SHIFT+C in chrome)
@@ -14,7 +16,7 @@ Micro bot, linkedIn manager. This bot can loop throught accounts of "People you 
 5. Set cursor to console, paste all the code, press enter
 
 
-# Check
+### Check
 If all done correctly, when you type in console "bot", you have to see something like this:
 ``` javascript
 Object{ ... }
@@ -26,8 +28,8 @@ If you see something like this, than you have to redo all from start:
 ReferenceError: bot is not defined
 ```
 
-# Usage
-I see this bot very usefull to create thematical groups (Java devs, Js devs, C++ devs .... etc) by recruiters. Sure 1 account for each. 
+### Usage
+I see this bot very usefull to create thematical groups (Java devs, Js devs, C++ devs .... etc) by recruiters. Sure 1 account for each.
 Or developer can parse contacts for recruiters. As far as this totally depends on your current  contacts you have to get some before you start.
 The script is safe, you may ask any to review the code.
 
@@ -59,11 +61,11 @@ minus - anti-keywords. If found at least one - the person doesn't fit.
 
 interval - interval between bot clicks. Play with this param on your own risk. I've tested 2000 (ms). That was ok.
 
-# Note
+### Note
 - You have to insert the script each time you reload the page.
 - If your computer falls asleep, I believe, the script wont work ;)
 
-# Example
+### Example
 Recruiter searches for javascript developers:
 ``` javascript
 bot.start({
@@ -72,3 +74,6 @@ bot.start({
   "minus" : ["trainee", "junior"]
 })
 ```
+
+## Chrome extension
+Some docs here TODO
