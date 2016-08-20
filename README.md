@@ -1,79 +1,43 @@
 # Description
-This bot is actually like assistant.
-Doing simply the same thing you will do.
-You set your demands of search and bot will execute as far as he can.
+The task of the bot is to filter suggested contacts by the certain criteria.
 
-# Install
-## Manual version
-1. Open linkedIn. Goto "People you might know" page (https://www.linkedin.com/people/pymk?trk=nav_responsive_sub_nav_pymk)
+# App
+App is made on the form of the google chrome extension.
 
-2. Make right button Click in any place, pick "Inspect Element" (in mozilla, CTRL+SHIFT+C in chrome)
+# Build
+External dependencies:
 
-3. Click the tab console
-
-4. Copy all code from file bot.js
-
-5. Set cursor to console, paste all the code, press enter
-
-
-### Check
-If all done correctly, when you type in console "bot", you have to see something like this:
-``` javascript
-Object{ ... }
+Node.js. Easy install through [https://github.com/creationix/nvm](nvm):
+```
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash
 ```
 
-
-If you see something like this, than you have to redo all from start:
-``` javascript
-ReferenceError: bot is not defined
+Restart terminal and:
+```
+nvm install v4.5
+nvm use v4.5
 ```
 
-### Usage
-I see this bot very usefull to create thematical groups (Java devs, Js devs, C++ devs .... etc) by recruiters. Sure 1 account for each.
-Or developer can parse contacts for recruiters. As far as this totally depends on your current  contacts you have to get some before you start.
-The script is safe, you may ask any to review the code.
-
-You start the bot:
-``` javascript
-bot.start( {} )
+Install webpack globally:
+```
+npm install -g webpack
 ```
 
-If you want to stop:
-``` javascript
-bot.stop()
+Internal dependencies:
+```
+npm i
 ```
 
-You pass in options object, all fields are optional, except keywords:
-``` javascript
-bot.start({
-  "keywords" : [ "recruiter", "рекрутер", "рекрутинг", "recruitment", "looking for", "searching for" ],
-  "count" : 100,
-  "minus" : ["position", "job", "opportunity", "opportunities"],
-  "interval" : 2000
-})
+Start compilation (production version):
+```
+npm run build
 ```
 
-keywords - the only required field keywords, that bot is looking for. Not case sensitive. Need at least one for positive match.
-
-count - the bot will stop after adding this amount
-
-minus - anti-keywords. If found at least one - the person doesn't fit.
-
-interval - interval between bot clicks. Play with this param on your own risk. I've tested 2000 (ms). That was ok.
-
-### Note
-- You have to insert the script each time you reload the page.
-- If your computer falls asleep, I believe, the script wont work ;)
-
-### Example
-Recruiter searches for javascript developers:
-``` javascript
-bot.start({
-  "keywords"  : ["javascript", "node", "meteor", "angular", "backbone"],
-  "count" : 200,
-  "minus" : ["trainee", "junior"]
-})
+Start compilation (development version):
+```
+npm start
 ```
 
-## Chrome extension
-Some docs here TODO
+# Usage
+Enable in your google chrome "developers mode", which allows you to load plugins.
+Load plugin pointing chrome to the build folder.
