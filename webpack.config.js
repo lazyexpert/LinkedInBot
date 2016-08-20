@@ -30,7 +30,7 @@ const popupWindowConfig = {
 
   output: {
     path: path.join(__dirname, "./build/js/"),
-    filename: "app.js"
+    filename: "popupExtension.js"
   },
 
   devtool : "cheap-inline-module-source-map", /* TODO: uncomment in REAl production : NODE_ENV == "development" ? "cheap-inline-module-source-map" : null,*/
@@ -44,7 +44,7 @@ const contestScriptConfig = {
 
   output: {
     path: path.join(__dirname, "./build/js"),
-    filename: "start.js"
+    filename: "contentScript.js"
   },
 
   devtool : "cheap-inline-module-source-map", /* TODO: uncomment in REAl production : NODE_ENV == "development" ? "cheap-inline-module-source-map" : null,*/
