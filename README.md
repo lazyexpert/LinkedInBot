@@ -41,3 +41,16 @@ npm start
 # Usage
 Enable in your google chrome "developers mode", which allows you to load plugins.
 Load plugin pointing chrome to the build folder.
+
+# Manual usage
+If you know, what you're doing, feel free to load the bot object to the console manually from here: https://github.com/lazyexpert/LinkedInBot/blob/master/dev/contentScript.js
+
+Since you loaded the bot manually, the sample usage is:
+```javascript
+ bot.start({
+   "keywords" : [ "recruiter", "рекрутер", "рекрутинг", "recruitment", "looking for", "searching for" ],
+   "count" : 100,
+   "minus" : ["position", "job", "opportunity", "opportunities"],
+   "interval" : 2000
+ })
+```

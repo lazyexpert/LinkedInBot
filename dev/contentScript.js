@@ -16,10 +16,10 @@
            ctx.bot = {
              keywords : [],
              selectors : {
-               card: ".card.pymk-card",
-               desc: "p.headline span",
-               add: ".bt-request-buffed",
-               cancel: ".bt-close"
+               card: ".pymk-card",
+               desc: ".pymk-card__details span.pymk-card__occupation",
+               add: ".pymk-card__action-container button.button-secondary-small",
+               cancel: ".pymk-card__close-btn"
              },
              start : function( options ) {
                if( !(options && options.keywords) ) return;
